@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:id="@+id/firstLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:layout_centerHorizontal="true">
+    <RelativeLayout
+        android:id="@+id/firstImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/space_stations"
+            app:srcCompat="@drawable/satellite"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/space_stations" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/secondImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/firstImage"
+        android:layout_marginStart="60dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/flights"
+            app:srcCompat="@drawable/rocket"
+            tools:ignore="ImageContrastCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:text="@string/flights"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ThirdImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/secondImage"
+        android:layout_marginStart="60dp">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/flights"
+            app:srcCompat="@drawable/rover" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:text="@string/rovers"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/firstLayout"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/firstText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="45dp"
+            android:paddingVertical="40dp"
+            android:textColor="@color/white"
+            android:text="@string/dca"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:layout_toEndOf="@+id/firstText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="45dp"
+            android:layout_marginStart="20dp"
+            android:paddingVertical="40dp"
+            android:textColor="@color/white"
+            android:text="@string/mars"
+            android:background="@drawable/rectangle"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/arrows"
+            android:src="@drawable/arrows"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thirdLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/rect"
+        android:layout_below="@+id/secondLayout">
+
+        <TextView
+            android:id="@+id/way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/one_way"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/way"
+            tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thirdLayout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rect"
+        android:padding="10dp"
+        android:text="@string/traveller"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+
+
+
+</RelativeLayout>
